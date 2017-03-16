@@ -117,7 +117,7 @@ Additional properties are attached to the result to simplify usage
 
 ```javascript
 var parser  = require('fleek-parser');
-var swagger = parser.parse('./swager.json');
+var swagger = parser.parse('./swagger.json');
 
 console.log(swagger.controllers);
 console.log(swagger.routeValidationMap);
