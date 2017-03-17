@@ -1,11 +1,11 @@
 {
   "name": "fleek-parser",
   "version": "2.0.0",
-  "description": "A parser for the fleek framework",
+  "description": "A swagger parser for the fleek framework",
   "repository": "https://github.com/fleekjs/fleek-parser",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/*"
+    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha --R tests --coverage"
   },
   "keywords": [
     "fleek",
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "sinon": "^2.0.0",
-    "sinon-chai": "^2.8.0"
+    "sinon": "^2.0.0"
   }
 }

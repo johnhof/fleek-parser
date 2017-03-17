@@ -3,11 +3,9 @@
 const mocha = require('mocha');
 const chai = require('chai');
 const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
 
 const expect = chai.expect;
 
-chai.use(sinonChai);
 const FleekParser  = require('..').FleekParser;
 
 describe('Parser', () => {
@@ -166,12 +164,12 @@ describe('Parser', () => {
         (new FleekParser())._debug();
         (new FleekParser({ debug: false }))._debug();
         (new FleekParser({ debug: 1 }))._debug();
-        expect(console.log).not.to.be.called;
+        expect(console.log.called).to.be.false;
       });
 
       it('should call console.log() if debug is true', () => {
         (new FleekParser({ debug: true }))._debug();
-        expect(console.log).to.be.called;
+        expect(console.log.called).to.be.true;
       });
     });
   });
