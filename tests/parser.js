@@ -163,6 +163,52 @@ describe('Parser', () => {
       });
     });
 
+    describe('._resolveRefs', () => {
+      it('should resolve internal refs', () => {
+        let spec = {
+          buz: { $ref: '#/foo/bar' },
+          fuz: { $ref: '#/foo/baz' },
+          foz: { faz: { $ref: '#/fuz' } },
+          foo: {
+            bar: { biz: true },
+            baz: { biz: false }
+          }
+        };
+        console.log(spec);
+        let result = (new FleekParser())._resolveRefs(spec)
+        console.log(result)
+        expect(result.buz.biz).to.equal(spec.foo.bar.biz);
+        expect(result.fuz.biz).to.equal(spec.foo.baz.biz);
+        expect(result.foz.faz.biz).to.equal(spec.foo.baz.biz);
+      });
+
+      it('should resolve external local file refs', () => {
+
+      });
+
+      it('should resolve external local file internal refs', () => {
+
+      });
+    });
+
+    describe('._resolveInternalJsonRef', () => {
+      it('should return the value associated with the ref', () => {
+        let spec = { foo: { bar: { biz: true }, baz: { biz: false} } }
+        expect((new FleekParser())._resolveInternalJsonRef('nonsense#/foo/bar', spec)).to.equal(spec.foo.bar);
+        expect((new FleekParser())._resolveInternalJsonRef('#/foo/bar', spec)).to.equal(spec.foo.bar);
+      });
+
+      it('should return undefined if the ref is invalid', () => {
+        let spec = { foo: { bar: { biz: true }, baz: { biz: false} } }
+        expect((new FleekParser())._resolveInternalJsonRef()).to.be.undefined;
+        expect((new FleekParser())._resolveInternalJsonRef(null, {})).to.be.undefined;
+        expect((new FleekParser())._resolveInternalJsonRef({}, {})).to.be.undefined;
+        expect((new FleekParser())._resolveInternalJsonRef({})).to.be.undefined;
+        expect((new FleekParser())._resolveInternalJsonRef('#/')).to.be.undefined;
+        expect((new FleekParser())._resolveInternalJsonRef('#/foo/bar/biz/fu/baaar')).to.undefined;
+      });
+    });
+
     describe('._debug', () => {
       beforeEach(() => sinon.spy(console, 'log'));
       afterEach(() => console.log.restore());
