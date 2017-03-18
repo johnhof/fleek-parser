@@ -18,8 +18,15 @@ describe('Parser', () => {
 
   });
 
-  describe('parser', () => {
+  describe('parseSync', () => {
+    describe('Should support internal refs', () => {
+      let result = (new FleekParser()).parseSync(`${__dirname}/spec/internal_ref/index.json`);
+      console.log(result)
+    });
 
+    describe('Should support external, local refs', () => {
+      // (new FleekParser()).parseSync(`${__dirname}/spec/local_ref/index.json`)
+    });
   });
 
   describe('External helpers', () => {
@@ -35,7 +42,7 @@ describe('Parser', () => {
       });
 
       it('should return an object for valid stringified swagger JSON', () => {
-        expect((new FleekParser()).extractSwagger(`${__dirname}/swagger.min.json`)).to.be.an('object');
+        expect((new FleekParser()).extractSwagger(`${__dirname}/spec/min.json`)).to.be.an('object');
       });
 
       it('should error out for no parameters', () => {
@@ -74,7 +81,7 @@ describe('Parser', () => {
 
         // invalid path
         expect((new FleekParser()).isSwaggerJson('{ "swagger": "2.0", "info": { "version": "test", "title": "test" } }')).to.be.false;
-        expect((new FleekParser()).isSwaggerJson('{ "swagger": "2.0", "paths": {}, "info": { "version": "test", "title": "test" } }')).to.be.false
+        expect((new FleekParser()).isSwaggerJson('{ "swagger": "2.0", "paths": false, "info": { "version": "test", "title": "test" } }')).to.be.false
 
         // invalid info
         expect((new FleekParser()).isSwaggerJson('{ "swagger": "2.0", "paths": [] }')).to.be.false;
@@ -107,7 +114,7 @@ describe('Parser', () => {
 
         // invalid path
         expect((new FleekParser()).isSwaggerObj({ swagger: '2.0', info: { version: 'test', title: 'test' } })).to.be.false;
-        expect((new FleekParser()).isSwaggerObj({ swagger: '2.0', paths: {}, info: { version: 'test', title: 'test' } })).to.be.false
+        expect((new FleekParser()).isSwaggerObj({ swagger: '2.0', paths: false, info: { version: 'test', title: 'test' } })).to.be.false
 
         // invalid info
         expect((new FleekParser()).isSwaggerObj({ swagger: '2.0', paths: [] })).to.be.false;

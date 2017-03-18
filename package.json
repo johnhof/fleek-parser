@@ -16,7 +16,7 @@
   "engines": {},
   "license": "MIT",
   "dependencies": {
-    "json-refs": "^2.1.6",
+    "fibers": "^1.0.15",
     "lodash": "^3.10.0",
     "traverse": "^0.6.6"
   },
