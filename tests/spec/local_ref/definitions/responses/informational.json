@@ -1,0 +1,24 @@
+{
+  "Continue": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 100
+        }
+      }
+    }]
+  },
+  "SwitchingProtocols": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 101
+        }
+      }
+    }]
+  }
+}

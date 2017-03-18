@@ -1,0 +1,41 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Micron",
+    "description": "Microservice on fleek",
+    "version": "1.0.0"
+  },
+  "host": "localhost:1991",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/v2",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "allOf": [{
+      "$ref": "endpoints/status.json"
+    }, {
+      "$ref": "endpoints/foo.json"
+    }]
+  },
+  "definitions": {
+    "allOf": [{
+      "$ref": "definitions/responses/base.json"
+    }, {
+      "$ref": "definitions/responses/client_error.json"
+    }, {
+      "$ref": "definitions/responses/informational.json"
+    }, {
+      "$ref": "definitions/responses/redirection.json"
+    }, {
+      "$ref": "definitions/responses/server_error.json"
+    }, {
+      "$ref": "definitions/responses/success.json"
+    }]
+  }
+}

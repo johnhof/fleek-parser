@@ -1,0 +1,112 @@
+{
+  "OK": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 200
+        }
+      }
+    }]
+  },
+  "Created": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 201
+        }
+      }
+    }]
+  },
+  "Accepted": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 202
+        }
+      }
+    }]
+  },
+  "NonAuthoritativeInformation": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 204
+        }
+      }
+    }]
+  },
+  "NoContent": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 204
+        }
+      }
+    }]
+  },
+  "ResetContent": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 205
+        }
+      }
+    }]
+  },
+  "PartialContent": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 206
+        }
+      }
+    }]
+  },
+  "MultiStatus": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 207
+        }
+      }
+    }]
+  },
+  "AlreadyReported": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 209
+        }
+      }
+    }]
+  },
+  "IMUsed": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 226
+        }
+      }
+    }]
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "BadRequest": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Bad request"
+            }
+          }
+        },
+        "code": {
+          "default": 400
+        }
+      }
+    }]
+  },
+  "Unauthorized": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Unauthorized"
+            }
+          }
+        },
+        "code": {
+          "default": 401
+        }
+      }
+    }]
+  },
+  "PaymentRequired": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Payment required"
+            }
+          }
+        },
+        "code": {
+          "default": 402
+        }
+      }
+    }]
+  },
+  "Forbidden": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Forbidden"
+            }
+          }
+        },
+        "code": {
+          "default": 403
+        }
+      }
+    }]
+  },
+  "NotFound": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Not found"
+            }
+          }
+        },
+        "code": {
+          "default": 404
+        }
+      }
+    }]
+  },
+  "MethodNotAllowed": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Method not allowed"
+            }
+          }
+        },
+        "code": {
+          "default": 405
+        }
+      }
+    }]
+  },
+  "NotAcceptable": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Not acceptable"
+            }
+          }
+        },
+        "code": {
+          "default": 406
+        }
+      }
+    }]
+  },
+  "ProxyAuthenticationRequired": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Proxy authentication required"
+            }
+          }
+        },
+        "code": {
+          "default": 407
+        }
+      }
+    }]
+  },
+  "RequestTimeout": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Request Timeout"
+            }
+          }
+        },
+        "code": {
+          "default": 408
+        }
+      }
+    }]
+  },
+  "Conflict": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Conflict"
+            }
+          }
+        },
+        "code": {
+          "default": 409
+        }
+      }
+    }]
+  },
+  "Gone": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Gone"
+            }
+          }
+        },
+        "code": {
+          "default": 410
+        }
+      }
+    }]
+  },
+  "LengthRequired": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Length required"
+            }
+          }
+        },
+        "code": {
+          "default": 411
+        }
+      }
+    }]
+  },
+  "PreconditionFailed": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Precondition failed"
+            }
+          }
+        },
+        "code": {
+          "default": 412
+        }
+      }
+    }]
+  },
+  "RequestEntityTooLarge": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Request entity too large"
+            }
+          }
+        },
+        "code": {
+          "default": 413
+        }
+      }
+    }]
+  },
+  "RequestURITooLong": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Request-URI too long"
+            }
+          }
+        },
+        "code": {
+          "default": 414
+        }
+      }
+    }]
+  },
+  "UnsupportedMediaType": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Unsupported media type"
+            }
+          }
+        },
+        "code": {
+          "default": 415
+        }
+      }
+    }]
+  },
+  "RequestedRangeNotSatisfiable": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Requested range not satisfiable"
+            }
+          }
+        },
+        "code": {
+          "default": 416
+        }
+      }
+    }]
+  },
+  "ExpectationFailed": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Expectation failed"
+            }
+          }
+        },
+        "code": {
+          "default": 417
+        }
+      }
+    }]
+  },
+  "UnprocessableEntity": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Unprocessable entity"
+            }
+          }
+        },
+        "code": {
+          "default": 422
+        }
+      }
+    }]
+  },
+  "Locked": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "code": {
+          "default": 423
+        }
+      }
+    }]
+  },
+  "FailedDependency": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Failed dependency"
+            }
+          }
+        },
+        "code": {
+          "default": 424
+        }
+      }
+    }]
+  },
+  "UnorderedCollection": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Unordered collection"
+            }
+          }
+        },
+        "code": {
+          "default": 425
+        }
+      }
+    }]
+  },
+  "UpgradeRequired": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Upgrade required"
+            }
+          }
+        },
+        "code": {
+          "default": 426
+        }
+      }
+    }]
+  },
+  "PreconditionRequired": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Preocondition required"
+            }
+          }
+        },
+        "code": {
+          "default": 428
+        }
+      }
+    }]
+  },
+  "TooManyRequests": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Too many requests"
+            }
+          }
+        },
+        "code": {
+          "default": 429
+        }
+      }
+    }]
+  },
+  "Request Header Fields Too Large": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Request Header Fields Too Large"
+            }
+          }
+        },
+        "code": {
+          "default": 432
+        }
+      }
+    }]
+  }
+}

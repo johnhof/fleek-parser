@@ -1,0 +1,242 @@
+{
+  "InternalServerError": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Internal server error"
+            }
+          }
+        },
+        "code": {
+          "default": 500
+        }
+      }
+    }]
+  },
+  "NotImplemented": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Not implemented"
+            }
+          }
+        },
+        "code": {
+          "default": 501
+        }
+      }
+    }]
+  },
+  "BadGateway": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Bad gateway"
+            }
+          }
+        },
+        "code": {
+          "default": 502
+        }
+      }
+    }]
+  },
+  "ServiceUnavailable": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Service unuvailable"
+            }
+          }
+        },
+        "code": {
+          "default": 503
+        }
+      }
+    }]
+  },
+  "GatewayTimeout": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "code": {
+          "default": 504
+        }
+      }
+    }]
+  },
+  "HTTPVersionNotSupported": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "HTTP version not supported"
+            }
+          }
+        },
+        "code": {
+          "default": 505
+        }
+      }
+    }]
+  },
+  "VariantAlsoNegotiates": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Variant also negotiates"
+            }
+          }
+        },
+        "code": {
+          "default": 506
+        }
+      }
+    }]
+  },
+  "InsufficientStorage": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Insufficient storage"
+            }
+          }
+        },
+        "code": {
+          "default": 507
+        }
+      }
+    }]
+  },
+  "LoopDetected": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Loop detected"
+            }
+          }
+        },
+        "code": {
+          "default": 508
+        }
+      }
+    }]
+  },
+  "BandwidthLimitExceeded": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Bandwidth limit exceeded"
+            }
+          }
+        },
+        "code": {
+          "default": 509
+        }
+      }
+    }]
+  },
+  "NotExtended": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "NotExtended"
+            }
+          }
+        },
+        "code": {
+          "default": 511
+        }
+      }
+    }]
+  },
+  "NetworkAuthenticationRequired": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "default": "Network authentication required"
+            }
+          }
+        },
+        "code": {
+          "default": 511
+        }
+      }
+    }]
+  }
+}

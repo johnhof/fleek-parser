@@ -1,0 +1,47 @@
+{
+  "/status": {
+    "get": {
+      "description": "Get status",
+      "tags": [
+        "status"
+      ],
+      "responses": {
+        "200": {
+          "schema": {
+            "allOf": [{
+              "$ref": "#/definitions/200"
+            }, {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "resources": {
+                      "type": "string"
+                    },
+                    "services": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }]
+          }
+        },
+        "500": {
+          "schema": {
+            "$ref": "#/definitions/500"
+          }
+        }
+      },
+      "parameters": [{
+        "name": "shallow",
+        "in": "query",
+        "description": "If true, do not request /status of dependencies",
+        "type": "boolean"
+      }]
+    }
+  }
+}

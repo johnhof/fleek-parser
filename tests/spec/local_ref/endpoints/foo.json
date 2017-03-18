@@ -1,0 +1,122 @@
+{
+  "/foo/:id": {
+    "get": {
+      "description": "Get foo",
+      "tags": [
+        "foo"
+      ],
+      "parameters": [{
+        "name": "id",
+        "in": "path",
+        "description": "ID of the foo",
+        "type": "integer",
+        "required": true
+      }],
+      "responses": {
+        "200": {
+          "schema": {
+            "$ref": "#/definitions/200"
+          }
+        },
+        "500": {
+          "schema": {
+            "$ref": "#/definitions/500"
+          }
+        }
+      }
+    },
+    "put": {
+      "description": "Update foo",
+      "tags": [
+        "foo"
+      ],
+      "responses": {
+        "200": {
+          "schema": {
+            "$ref": "#/definitions/200"
+          }
+        },
+        "500": {
+          "schema": {
+            "$ref": "#/definitions/500"
+          }
+        },
+        "parameters": [{
+          "name": "first_name",
+          "in": "body",
+          "description": "User first name",
+          "type": "string"
+        }, {
+          "name": "last_name",
+          "in": "body",
+          "description": "User last name",
+          "type": "string"
+        }]
+      }
+    },
+    "delete": {
+      "description": "Remove foo",
+      "tags": [
+        "foo"
+      ],
+      "responses": {
+        "200": {
+          "schema": {
+            "$ref": "#/definitions/200"
+          }
+        }
+      },
+      "500": {
+        "schema": {
+          "$ref": "#/definitions/500"
+        }
+      }
+    }
+  },
+  "/foo": {
+    "post": {
+      "description": "Create foo",
+      "tags": [
+        "foo"
+      ],
+      "parameters": [{
+        "name": "first_name",
+        "in": "body",
+        "description": "User first name",
+        "type": "string",
+        "required": true
+      }, {
+        "name": "last_name",
+        "in": "body",
+        "description": "User last name",
+        "type": "string",
+        "required": true
+      }, {
+        "name": "email",
+        "in": "body",
+        "description": "Account Email",
+        "type": "string",
+        "email": true,
+        "required": true
+      }, {
+        "name": "password",
+        "in": "body",
+        "description": "Account password",
+        "type": "string",
+        "required": true
+      }],
+      "responses": {
+        "200": {
+          "schema": {
+            "$ref": "#/definitions/200"
+          }
+        },
+        "500": {
+          "schema": {
+            "$ref": "#/definitions/500"
+          }
+        }
+      }
+    }
+  }
+}

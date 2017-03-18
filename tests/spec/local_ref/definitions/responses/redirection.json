@@ -1,0 +1,101 @@
+{
+  "MultipleChoices": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 300
+        }
+      }
+    }]
+  },
+  "MovedPermanently": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 301
+        }
+      }
+    }]
+  },
+  "Found": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 302
+        }
+      }
+    }]
+  },
+  "SeeOther": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 303
+        }
+      }
+    }]
+  },
+  "NotModified": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 304
+        }
+      }
+    }]
+  },
+  "UseProxy": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 305
+        }
+      }
+    }]
+  },
+  "Reserved": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 306
+        }
+      }
+    }]
+  },
+  "TemporaryRedirect": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 307
+        }
+      }
+    }]
+  },
+  "PermanentRedirect": {
+    "allOf": [{
+      "$ref": "#/definitions/BaseResponse"
+    }, {
+      "properties": {
+        "code": {
+          "default": 308
+        }
+      }
+    }]
+  }
+}
